@@ -1,10 +1,10 @@
-class ContactMailer < ActionMailer::base
+class ContactMailer < ActionMailer::Base
   default to: 'ngoc.frcnam@gmail.com'
   def contact_email(name, email, body)
     @name = name
     @email = email
     @body = body
     
-    email(from: email, subject: 'Contact From Message')
+    mail(from: email, subject: 'Contact Form Message')
   end
 end
