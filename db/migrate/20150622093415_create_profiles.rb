@@ -1,4 +1,5 @@
 class CreateProfiles < ActiveRecord::Migration
+  # create profile table and add user at the same time
   def change
     create_table :profiles do |t|
       t.integer :user_id
@@ -8,7 +9,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :phone_number
       t.string :contact_email
       t.text :description
-      
+
       t.timestamps
     end
   end

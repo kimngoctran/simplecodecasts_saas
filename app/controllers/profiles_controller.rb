@@ -5,7 +5,7 @@ class ProfilesController < ApplicationController
     @profile = @user.build_profile
   end
   def create
-    @use = User.find(params[:user_id])
+    @user = User.find(params[:user_id])
     @profile = @user.build_profile(profile_params)
     if @profile.save
       flash[:success] = "Profile Updated"
@@ -14,6 +14,7 @@ class ProfilesController < ApplicationController
       render action: :new
     end
   end
+  #from validation: rules that require users to fill out fields before he can submit it
   private
   def profile_params
     params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description)
