@@ -14,6 +14,10 @@ class ProfilesController < ApplicationController
       render action: :new
     end
   end
+  def edit
+    @user = User.find(params[:user_id])
+    @profile = @user.profile
+  end
   #from validation: rules that require users to fill out fields before he can submit it
   private
   def profile_params
