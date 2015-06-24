@@ -34,7 +34,7 @@ class ProfilesController < ApplicationController
   #from validation: rules that require users to fill out fields before he can submit it
   private
   def profile_params
-    params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description)
+    params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
   end
   def only_current_user
     @user = User.find(params[:user_id])
