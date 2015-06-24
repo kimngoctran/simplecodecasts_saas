@@ -1,0 +1,30 @@
+.avatar{
+  margin-top: 20px;
+}
+.job_title_icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #4cae4c;
+  color: white;
+  background-color: #5cb85c;
+  border-radius: 4px;
+  text-align: center;
+  
+}
+.well.block_description{
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  h3{
+    margin-top: 0px;
+  }
+}
+.well.block_contact{
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  h3{
+    margin-top: 0px;
+  }
+}
