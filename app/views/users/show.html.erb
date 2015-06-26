@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-3 text-center avatar">
-    <%= image_tag @user.profile.avatar.url %>
+    <%= image_tag @user.profile.avatar.url(:thumb) %>
   </div>
   <div class="col-md-6">
        <h1><%= @user.profile.first_name %> <%= @user.profile.last_name %></h1>
@@ -9,12 +9,13 @@
       <h3>Description</h3>
        <p><%= @user.profile.description %></p>
     </div>
-    <div class="well block_contact">
-      <% if true#current_user.plan_id == 2 %>
-        <h3>Contact</h3>
-        <%= @user.profile.phone_number %> <br/>
-        <%= @user.profile.contact_email %> <br/>
+      <% if current_user.plan_id == 2 %>
+        <div class="well block_contact">
+          <h3>Contact</h3>
+          <%= @user.profile.phone_number %> <br/>
+          <%= @user.profile.contact_email %> <br/>
+        </div>
       <% end %> 
-    </div>
+    
   </div> 
 </div>

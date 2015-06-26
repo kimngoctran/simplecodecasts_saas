@@ -1,0 +1,23 @@
+<% @users.each do |user| %>
+<div class="row">
+  <div class="media col-md-8 col-md-offset-2">
+    <div class="well">
+      <div class="row">
+        <div class="media-left col-sm-3 text-center">
+          <%= link_to user do %>
+          <%= image_tag user.profile.avatar.url(:thumb) %>
+          <% end %>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">
+            <%= link_to user do %>
+            <%= user.profile.first_name %> <%= user.profile.last_name %>
+            <% end %>
+          </h4>
+          <p> <%= user.profile.description %> </p>
+        </div> 
+      </div>
+    </div>   
+  </div> 
+</div>
+<% end %>
