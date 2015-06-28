@@ -53,4 +53,5 @@ gem 'paperclip', '~>4.2.1'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'byebug', group: :development
 
