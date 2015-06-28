@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Create basic and pro planq
+
+Plan.create!(id: 1, name: 'basic')
+Plan.create!(id: 2, name: 'pro')
