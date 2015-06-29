@@ -18,5 +18,5 @@
 # Ignore application configuration
 /config/application.yml
 
-# Ignore uploaded files
+# Ignore uploaded files avatar
 /public/system
